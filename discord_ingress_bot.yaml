@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: discord_ingress_bot
+spec:
+  selector:
+    matchLabels:
+      app: discord_ingress_bot
+  replicas: 1
+  minReadySeconds: 5
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: discord_ingress_bot
+    spec:
+      containers:
+        - name: latinify
+          image: ghcr.io/discite/discord_ingress_bot:latest
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 10m
+              memory: 10M
+            limits:
+              cpu: 20m
+              memory: 20M
