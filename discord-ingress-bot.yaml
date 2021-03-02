@@ -17,7 +17,13 @@ spec:
         app: discord-ingress-bot
     spec:
       containers:
-        - name: latinify
+        - name: discord-ingress-bot
+          env:
+          - name: DISCORD_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: romvlvs-secret
+                key: DISCORD_TOKEN
           image: ghcr.io/discite/discord-ingress-bot:latest
           imagePullPolicy: Always
           resources:
