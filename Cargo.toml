@@ -1,5 +1,5 @@
 [package]
-name = "discord_ingress_bot"
+name = "discord-ingress-bot"
 version = "0.1.0"
 authors = ["discite-mac <4948877+discite@users.noreply.github.com>"]
 edition = "2018"

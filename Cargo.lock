@@ -141,7 +141,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "discord_ingress_bot"
+name = "discord-ingress-bot"
 version = "0.1.0"
 dependencies = [
  "serenity",

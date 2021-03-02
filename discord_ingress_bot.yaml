@@ -2,11 +2,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: discord_ingress_bot
+  name: discord-ingress-bot
 spec:
   selector:
     matchLabels:
-      app: discord_ingress_bot
+      app: discord-ingress-bot
   replicas: 1
   minReadySeconds: 5
   strategy:
@@ -14,11 +14,11 @@ spec:
   template:
     metadata:
       labels:
-        app: discord_ingress_bot
+        app: discord-ingress-bot
     spec:
       containers:
         - name: latinify
-          image: ghcr.io/discite/discord_ingress_bot:latest
+          image: ghcr.io/discite/discord-ingress-bot:latest
           imagePullPolicy: Always
           resources:
             requests:
