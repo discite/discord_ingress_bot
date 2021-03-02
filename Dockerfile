@@ -9,7 +9,7 @@ RUN rm src/*.rs
 
 ADD . ./
 RUN echo $(ls -1 ./target/x86_64-unknown-linux-musl/release/deps/)
-RUN rm ./target/x86_64-unknown-linux-musl/release/deps/discord-ingress-bot*
+RUN rm ./target/x86_64-unknown-linux-musl/release/deps/discord_ingress_bot*
 RUN cargo build --release
 
 
