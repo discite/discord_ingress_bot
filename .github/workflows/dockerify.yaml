@@ -48,7 +48,7 @@ jobs:
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
-          args: -n romvlvs set image --record deployment/discord-ingress-bot latinify=ghcr.io/${{ github.repository }}:${{ steps.get_version.outputs.tag }}
+          args: -n romvlvs set image --record deployment/discord-ingress-bot discord-ingress-bot=ghcr.io/${{ github.repository }}:${{ steps.get_version.outputs.tag }}
       - name: verify deployment
         uses: steebchen/kubectl@master
         env:
