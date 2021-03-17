@@ -33,7 +33,7 @@ struct Latinify {
 }
 
 async fn latinify(msg: String) -> Result<String, Box<dyn std::error::Error>> {
-    let request_url = format!("http://latinify.romvlvs:8000/{}/", msg);
+    let request_url = format!("http://latinify-service:8000/{}/", msg);
     let resp = reqwest::get(&request_url)
         .await?;
     let latinify: Latinify = resp.json().await?;
